@@ -5,6 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:social_prac/models/user.dart';
 import 'package:social_prac/providers/user_provider.dart';
+import 'package:social_prac/resources/firestore_methods.dart';
 // import 'package:provider/provider.dart';
 import 'package:social_prac/utils/colors.dart';
 import 'package:social_prac/utils/utils.dart';
@@ -21,6 +22,18 @@ class AddPostScreen extends StatefulWidget {
 
 class _AddPostScreenState extends State<AddPostScreen> {
   Uint8List? _file;
+  final TextEditingController _descriptionController = TextEditingController();
+
+  void postImage(
+    String uid,
+    String username,
+    String profImage,
+  ) async {
+    try {
+      String res = await FirestoreMethods().uploadPost(
+          _descriptionController.text, _file!, uid, username, profImage);
+    } catch (e) {}
+  }
 
   _selectImage(BuildContext context) async {
     return showDialog(
@@ -55,9 +68,22 @@ class _AddPostScreenState extends State<AddPostScreen> {
                   });
                 },
               ),
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(20),
+                child: const Text('Cancel'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
             ],
           );
         });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _descriptionController.dispose();
   }
 
   @override
@@ -83,7 +109,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
               centerTitle: false,
               actions: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: postImage,
                   child: const Text(
                     'Post',
                     style: TextStyle(
@@ -107,6 +133,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.3,
                       child: TextField(
+                        controller: _descriptionController,
                         decoration: const InputDecoration(
                           hintText: 'Write a caption....',
                           border: InputBorder.none,
@@ -122,8 +149,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                         child: Container(
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://images.unsplash.com/photo-1508107222753-0c236c337911?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80'),
+                              image: MemoryImage(_file!),
                               fit: BoxFit.fill,
                               alignment: FractionalOffset.topCenter,
                             ),
