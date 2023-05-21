@@ -68,6 +68,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "crypto",
+      "rootUri": "file:///Users/shailendrasisodia/.pub-cache/hosted/pub.dev/crypto-3.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///Users/shailendrasisodia/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5",
       "packageUri": "lib/",
@@ -326,6 +332,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "uuid",
+      "rootUri": "file:///Users/shailendrasisodia/.pub-cache/hosted/pub.dev/uuid-3.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vector_graphics",
       "rootUri": "file:///Users/shailendrasisodia/.pub-cache/hosted/pub.dev/vector_graphics-1.1.5+1",
       "packageUri": "lib/",
@@ -362,7 +374,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-05-20T19:59:16.718383Z",
+  "generated": "2023-05-21T13:03:05.462376Z",
   "generator": "pub",
   "generatorVersion": "3.0.1"
 }
