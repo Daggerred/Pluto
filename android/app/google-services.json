@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "471397823349",
+    "project_id": "mini-project-78c35",
+    "storage_bucket": "mini-project-78c35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471397823349:android:e27922484b92e545ff593c",
+        "android_client_info": {
+          "package_name": "com.example.social_prac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471397823349-q64m58etncf30qsvvtncqdqeqhj1ugq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8jbvwe-ZENXl8kcYKf5jjmJZbb7U1MkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "471397823349-q64m58etncf30qsvvtncqdqeqhj1ugq9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "471397823349-8renb7mnfcqdq74r93h55u2gr7t0hjvh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.socialPrac"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
