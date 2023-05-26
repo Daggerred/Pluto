@@ -60,7 +60,7 @@ class _Signup_ScreenState extends State<Signup_Screen> {
       } else {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => ResponsiveLayout(
+            builder: (context) => const ResponsiveLayout(
               webScreenLayout: WebScreenLayout(),
               mobileScreenLayout: MobileScreenLayout(),
             ),
