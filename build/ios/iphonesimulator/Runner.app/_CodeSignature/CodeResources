@@ -18,7 +18,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		Jp8facDB5UCKVZt57eTGwhBz6Yc=
+		Pg4HrkoO6O5ybcgOwuYCnBr0huA=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		qoPLQevesrc4lEw0I2yFyAUypcY=
+		FEhGSY1i5FxDZGeNPIiObI3gJi4=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,15 +54,15 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Fu7WsF31rbEO4qxmVOSBri/N6gw=
+		QUr9bw9nUQcbqsUai6sDwLX4wpA=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		oG5/OGn+vw7vp/nu5DUDoZJ4nFc=
+		JA8X9ejRXedMNKe2KDmMyosWDbA=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.smcbin</key>
 		<data>
-		BOBZtVCKogwuSluqb0miwcmwMmY=
+		sYkIDcDslezdFV4UiSLIJENSOgU=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -70,7 +70,11 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		ygDIniR/XwMJzme1iwEpOdI3jlw=
+		qhqyWlPmowyI2q1I+23kt/+Wjh8=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/batman.svg</key>
+		<data>
+		cbwAXRMZ81MPKqa0ZZmJTLgtqms=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -82,7 +86,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		M8OR0V1U1gvbxJkx5ygi1HDJQXo=
+		97s02H9jnuC5ALSxaO/B6lmClLk=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -122,7 +126,7 @@
 		</data>
 		<key>Frameworks/FirebaseAuth.framework/FirebaseAuth</key>
 		<data>
-		XrUOmS0Nk7C/0oANFTQXjO7KiaQ=
+		1ssEDHtBmttxg+5cd8iv90iMn8o=
 		</data>
 		<key>Frameworks/FirebaseAuth.framework/Info.plist</key>
 		<data>
@@ -146,7 +150,7 @@
 		</data>
 		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
 		<data>
-		ZFAqnJWoSUqgvlMswNvaJD5RjPs=
+		PqYA4eoBPQmL78JfF7wKEzeA6/0=
 		</data>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
 		<data>
@@ -170,7 +174,7 @@
 		</data>
 		<key>Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal</key>
 		<data>
-		WE0maFZzhpwLocX6G3aY7UEeZkA=
+		DrVrq2wKTkcpaxdeuhV2/XZLi+w=
 		</data>
 		<key>Frameworks/FirebaseCoreInternal.framework/Info.plist</key>
 		<data>
@@ -182,7 +186,7 @@
 		</data>
 		<key>Frameworks/FirebaseFirestore.framework/FirebaseFirestore</key>
 		<data>
-		7mljqCC+I36ixVnLkF1Ec6jV6F0=
+		+wmzMozHXB9Ytdzjy5XSEGGo0Y4=
 		</data>
 		<key>Frameworks/FirebaseFirestore.framework/Info.plist</key>
 		<data>
@@ -302,7 +306,7 @@
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities</key>
 		<data>
-		fACTm9oad+PkEEO4sKeGoVFK3UU=
+		6evhS+ThWDHRO4GbnBpd6fRo9wU=
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
 		<data>
@@ -456,7 +460,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sSz3BXx7KjE1MhrzDRs6ABTqUtqiMTELziyuci+4DGM=
+			mgaW/tm+WKvIZoOxqE4kPAiN8AljwZrGCgu4zV8IoRE=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -505,7 +509,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OMh2P9QJSrlBOKTHJgAW89gVI0pKr13l7B4XfaRMxww=
+			b1UtR2SYRnySeG6nYbTHocJ7uMUUGswjM5XholycZNM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -519,21 +523,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xl0pyCMrDJabkNXHFDUWumVyGA0+oGvKIUY1hJ6uQYI=
+			An5FZVEPc3x2LxNci9iMhszmJm50o6iZvjNyIQGkK4k=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Sps95+7JukayebvM0TLjL1LW1VXXndpKp/O8tOm9ZR8=
+			yc1GT9JhaWoRPlu2UNkHQHeipY24hFXqjO1UWwHL33M=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.smcbin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nFwFXoxik7nUz3ocXKA7ilNzgyDD8BvjtuMmn6MuJrY=
+			oOBF2dlAP8zA48RFrnefswsYMW7H7RyibRDcqI65zlY=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -547,7 +551,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3CP8mn1a/xm1j3T3rWTInIz2BPyBF4KG3a3073v09ZI=
+			bayglyoZVnXQJoS6odhcgRFQczcTNkXl7AKxkHtA3Ok=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/batman.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xPul19FiVB2zDruyhU1gyizMgI9DJ8EmUYjmd534ezg=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -568,7 +579,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			neisHVSd7Fjyy+4NZtjVyk8fP4j8+CZBn+JJ2JIHgBU=
+			AbqE+4tt8NM1vD0WteWFDAYJoW3vpBunMLT1wMIZU/0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -638,7 +649,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VVB5HEq4UsMPC5OdrAl+tBNp//l8dTmko0Oyv7BtIhM=
+			lnRJ9/yQSHyLs+mHjXCOtpvzeZvz1edL8sN2iuJqCX4=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseAuth.framework/Info.plist</key>
@@ -680,7 +691,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			b9/jcJq0jMDqrAiyB2nWTGjMxagCwubioCH67GL5Emg=
+			jhoNhb2KYvIjVodVT2102P29/SDMs0V5nwVE8DYrED0=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
@@ -722,7 +733,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aULB7Xls3/NiAR51Ecx0bvBeLby6AHFwK+6jJ55gEiI=
+			ZyAuAYv1E0wHWEEHW3OcDhU5M0/vGLzHt31Q7Q7c7vI=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreInternal.framework/Info.plist</key>
@@ -743,7 +754,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			d0AV03dashHHsOOz4e4j2Q6MuxFSY5DPcINYnxwONVc=
+			Qa/H/JVtb6faHjZzWtye0xy/R57ipC7xaz834cZVL1c=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseFirestore.framework/Info.plist</key>
@@ -953,7 +964,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U/VAArzgqYMX2cLxj8w/uX9GDzebq2leNa4V4ihwwtM=
+			XgGi8SQyuLt0forF5NajvkoshzXGxoS9mKW1kuA0fmc=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
