@@ -6,6 +6,7 @@ import 'package:social_prac/screens/signup_screen.dart';
 import 'package:social_prac/utils/colors.dart';
 import 'package:social_prac/utils/utils.dart';
 
+import '../responsive/dimensions.dart';
 import '../responsive/mobile_Screen_Layout.dart';
 import '../responsive/responsive_layout.dart';
 import '../responsive/web_Screen_Layout.dart';
@@ -21,11 +22,10 @@ class Login_Screen extends StatefulWidget {
 class _Login_ScreenState extends State<Login_Screen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  bool _isloading = false;
+  bool _isLoading = false;
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     _emailController.dispose();
     _passwordController.dispose();
@@ -33,25 +33,28 @@ class _Login_ScreenState extends State<Login_Screen> {
 
   void loginUser() async {
     setState(() {
-      _isloading = true;
+      _isLoading = true;
     });
     String res = await AuthMethods().loginUser(
         email: _emailController.text, password: _passwordController.text);
-    setState(() {
-      _isloading = false;
-    });
-
     if (res == 'success') {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (context) => const ResponsiveLayout(
-            webScreenLayout: WebScreenLayout(),
-            mobileScreenLayout: MobileScreenLayout(),
+      Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(
+            builder: (context) => const ResponsiveLayout(
+              mobileScreenLayout: MobileScreenLayout(),
+              webScreenLayout: WebScreenLayout(),
+            ),
           ),
-        ),
-      );
+          (route) => false);
+
+      setState(() {
+        _isLoading = false;
+      });
     } else {
-      showSnackBar(res, context);
+      setState(() {
+        _isLoading = false;
+      });
+      showSnackBar(context, res);
     }
   }
 
@@ -66,7 +69,10 @@ class _Login_ScreenState extends State<Login_Screen> {
       body: SafeArea(
           child: Container(
         // color: Colors.amber,
-        padding: const EdgeInsets.symmetric(horizontal: 32),
+        padding: MediaQuery.of(context).size.width > webScreenSize
+            ? EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width / 3)
+            : const EdgeInsets.symmetric(horizontal: 32),
         width: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -78,9 +84,10 @@ class _Login_ScreenState extends State<Login_Screen> {
             SvgPicture.asset(
               'assets/batman.svg',
               color: primaryColor,
-              height: 64,
+              height: 200,
+              width: 200,
             ),
-            const SizedBox(height: 64),
+            const SizedBox(height: 50),
             TextFieldInput(
               hintText: 'Enter your email',
               textInputType: TextInputType.emailAddress,
@@ -99,13 +106,18 @@ class _Login_ScreenState extends State<Login_Screen> {
             InkWell(
               onTap: loginUser,
               child: Container(
-                child: _isloading
+                child: _isLoading
                     ? Center(
                         child: CircularProgressIndicator(
                           color: primaryColor,
                         ),
                       )
-                    : const Text('Log in'),
+                    : const Text(
+                        'Log in',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
                 width: double.infinity,
                 alignment: Alignment.center,
                 padding: const EdgeInsets.symmetric(vertical: 12),
@@ -113,7 +125,7 @@ class _Login_ScreenState extends State<Login_Screen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(4)),
                     ),
-                    color: Colors.indigo),
+                    color: primaryColor),
               ),
             ),
             const SizedBox(
@@ -135,7 +147,11 @@ class _Login_ScreenState extends State<Login_Screen> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: navigationToSignup,
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const Signup_Screen(),
+                    ),
+                  ),
                   child: Container(
                     padding: const EdgeInsets.symmetric(
                       vertical: 8,

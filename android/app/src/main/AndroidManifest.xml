@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.social_prac">
    <application
-        android:label="social_prac"
+        android:label="PLUTO"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -32,3 +32,4 @@
             android:value="2" />
     </application>
 </manifest>
+

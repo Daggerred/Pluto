@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/FIRAppCheckInterop.h</key>
 		<data>
-		g7AaHmUid8R6vXHLNkNMbwz0sb8=
+		ArtWjMctu/kUnhE2Spb5f5H/NdU=
 		</data>
 		<key>Headers/FIRAppCheckTokenResultInterop.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KuI9cBRXxIcSPY/1zCUqZVMy0Hg=
+		M5h7xX45qqifRE5Jm40I4dY/b5M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -31,11 +31,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			g7AaHmUid8R6vXHLNkNMbwz0sb8=
+			ArtWjMctu/kUnhE2Spb5f5H/NdU=
 			</data>
 			<key>hash2</key>
 			<data>
-			tTsxi+fQ0MNeqU6ddyXux+BPLWTIgDMVJvmwsP1FHG8=
+			lqyjwMs5fbRbmoQd91XB9IOBIqM6HuxjOQBtV81cigM=
 			</data>
 		</dict>
 		<key>Headers/FIRAppCheckTokenResultInterop.h</key>

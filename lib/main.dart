@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
           //     webScreenLayout: WebScreenLayout(),
           //     mobileScreenLayout: MobileScreenLayout()),
           home: StreamBuilder(
-            stream: FirebaseAuth.instance.userChanges(),
+            stream: FirebaseAuth.instance.authStateChanges(),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.active) {
                 if (snapshot.hasData) {
@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
                   child: CircularProgressIndicator(
-                    color: primaryColor,
+                    color: mobileBackgroundColor,
                   ),
                 );
               }

@@ -12,10 +12,10 @@ class AuthMethods {
   Future<model.User> getUserDetails() async {
     User currentUser = _auth.currentUser!;
 
-    DocumentSnapshot snap =
+    DocumentSnapshot documentSnapshot =
         await _firestore.collection('users').doc(currentUser.uid).get();
 
-    return model.User.fromSnap(snap);
+    return model.User.fromSnap(documentSnapshot);
   }
 
   Future<String> signUpUser({
@@ -30,7 +30,8 @@ class AuthMethods {
       if (email.isNotEmpty ||
           password.isNotEmpty ||
           username.isNotEmpty ||
-          bio.isNotEmpty) {
+          bio.isNotEmpty ||
+          file != null) {
         // used for registering user
         UserCredential cred = await _auth.createUserWithEmailAndPassword(
             email: email, password: password);
@@ -39,7 +40,7 @@ class AuthMethods {
         String photoUrl = await StorageMethods()
             .uploadImageToStorage('profilePics', file, false);
 
-        model.User user = model.User(
+        model.User _user = model.User(
           username: username,
           uid: cred.user!.uid,
           email: email,
@@ -50,28 +51,17 @@ class AuthMethods {
         );
 
         //add user other data to our database
-        await _firestore.collection('users').doc(cred.user!.uid).set(
-              user.toJson(),
-            );
+        await _firestore
+            .collection("users")
+            .doc(cred.user!.uid)
+            .set(_user.toJson());
 
-        await _firestore.collection('users').add({
-          'username': username,
-          'uid': cred.user!.uid,
-          'email': email,
-          'bio': bio,
-          'inspiring': [],
-          'insperation': [],
-        });
         res = "success";
-      }
-    } on FirebaseAuthException catch (err) {
-      if (err.code == 'invalid-email') {
-        res = 'Something wromg with email';
       } else {
-        res;
+        res = "Please enter all the fields";
       }
     } catch (err) {
-      res = err.toString();
+      return err.toString();
     }
     return res;
   }
@@ -94,5 +84,9 @@ class AuthMethods {
       res = err.toString();
     }
     return res;
+  }
+
+  Future<void> signOut() async {
+    await _auth.signOut();
   }
 }

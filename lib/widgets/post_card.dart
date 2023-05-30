@@ -40,7 +40,7 @@ class _PostCardState extends State<PostCard> {
 
       commentLen = snap.docs.length;
     } catch (e) {
-      showSnackBar(e.toString(), context);
+      showSnackBar(context, e.toString());
     }
     setState(() {});
   }
@@ -187,14 +187,14 @@ class _PostCardState extends State<PostCard> {
                   ),
                 ),
                 icon: const Icon(
-                  Icons.comment_bank_rounded,
+                  Icons.comment_bank_outlined,
                   color: Colors.amberAccent,
                 ),
               ),
               IconButton(
                 onPressed: () {},
                 icon: const Icon(
-                  Icons.send_rounded,
+                  Icons.send_outlined,
                   color: Colors.amberAccent,
                 ),
               ),
@@ -243,7 +243,13 @@ class _PostCardState extends State<PostCard> {
                   ),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => CommentsScreen(
+                        snap: widget.snap,
+                      ),
+                    ),
+                  ),
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 4),
                     child: Text(

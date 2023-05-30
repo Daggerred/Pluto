@@ -30,7 +30,6 @@ class _Signup_ScreenState extends State<Signup_Screen> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     _emailController.dispose();
     _passwordController.dispose();
@@ -56,7 +55,7 @@ class _Signup_ScreenState extends State<Signup_Screen> {
         _isloading = false;
       });
       if (res != 'success') {
-        showSnackBar(res, context);
+        showSnackBar(context, res);
       } else {
         Navigator.of(context).push(
           MaterialPageRoute(
@@ -101,34 +100,37 @@ class _Signup_ScreenState extends State<Signup_Screen> {
             SvgPicture.asset(
               'assets/batman.svg',
               color: primaryColor,
-              height: 64,
+              height: 160,
+              width: 160,
             ),
             const SizedBox(
-              height: 32,
+              height: 5,
             ),
-            Stack(
-              children: [
-                _image != null
-                    ? CircleAvatar(
-                        radius: 64,
-                        backgroundImage: MemoryImage(_image!),
-                        backgroundColor: Colors.red,
-                      )
-                    : const CircleAvatar(
-                        radius: 64,
-                        backgroundImage:
-                            NetworkImage('https://i.stack.imgur.com/l60Hf.png'),
-                        backgroundColor: Colors.red,
-                      ),
-                Positioned(
-                  bottom: -10,
-                  left: 80,
-                  child: IconButton(
-                    onPressed: selectImage,
-                    icon: const Icon(Icons.add_a_photo),
-                  ),
-                )
-              ],
+            SingleChildScrollView(
+              child: Stack(
+                children: [
+                  _image != null
+                      ? CircleAvatar(
+                          radius: 64,
+                          backgroundImage: MemoryImage(_image!),
+                          backgroundColor: Colors.red,
+                        )
+                      : const CircleAvatar(
+                          radius: 64,
+                          backgroundImage: NetworkImage(
+                              'https://i.stack.imgur.com/l60Hf.png'),
+                          backgroundColor: Colors.red,
+                        ),
+                  Positioned(
+                    bottom: -10,
+                    left: 80,
+                    child: IconButton(
+                      onPressed: selectImage,
+                      icon: const Icon(Icons.add_a_photo),
+                    ),
+                  )
+                ],
+              ),
             ),
             const SizedBox(height: 64),
             TextFieldInput(
@@ -167,7 +169,12 @@ class _Signup_ScreenState extends State<Signup_Screen> {
                           color: primaryColor,
                         ),
                       )
-                    : const Text('Sign up'),
+                    : const Text(
+                        'Sign up',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
                 width: double.infinity,
                 alignment: Alignment.center,
                 padding: const EdgeInsets.symmetric(vertical: 12),
@@ -175,7 +182,7 @@ class _Signup_ScreenState extends State<Signup_Screen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(4)),
                     ),
-                    color: Colors.indigo),
+                    color: primaryColor),
                 // child: const Text('Sign up'),
               ),
             ),
@@ -194,7 +201,7 @@ class _Signup_ScreenState extends State<Signup_Screen> {
                     padding: const EdgeInsets.symmetric(
                       vertical: 8,
                     ),
-                    child: const Text("Don't have an account?"),
+                    child: const Text("Already have a Account?"),
                   ),
                 ),
                 GestureDetector(
@@ -204,7 +211,7 @@ class _Signup_ScreenState extends State<Signup_Screen> {
                       vertical: 8,
                     ),
                     child: const Text(
-                      "Sign up",
+                      "Log in",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),

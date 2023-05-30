@@ -87,12 +87,12 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
               color: _page == 2 ? primaryColor : secondaryColor,
             ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.favorite_rounded,
-              color: _page == 3 ? primaryColor : secondaryColor,
-            ),
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(
+          //     Icons.favorite_rounded,
+          //     color: _page == 3 ? primaryColor : secondaryColor,
+          //   ),
+          // ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person_2_rounded,
