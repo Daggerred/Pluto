@@ -1,16 +1,27 @@
 # social_prac
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+##LOGIN PAGE:
 
-A few resources to get you started if this is your first Flutter project:
+![image](https://github.com/Daggerred/Pluto/assets/119807467/ed15616a-1572-40f3-89b7-d28056bf0954)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+##SIGNUP PAGE:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/Daggerred/Pluto/assets/119807467/6f7cdea4-707c-47e9-a533-6ab09ecc1ff4)
+
+##FEED SCREEN WITH REALTIME LIKES:
+
+![image](https://github.com/Daggerred/Pluto/assets/119807467/de2a1df3-3ccf-4b72-b095-99c8c0a93e20)
+
+##COMMENTS SCREEN (REALTIME):
+
+![image](https://github.com/Daggerred/Pluto/assets/119807467/08983748-11f5-4c36-a33e-0b0fd5ab0b28)
+
+##NEW POST:
+
+![image](https://github.com/Daggerred/Pluto/assets/119807467/aab9271b-53ad-4e73-9e17-91dba64b62e8)
+
+
+
+
